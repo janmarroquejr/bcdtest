@@ -19,8 +19,10 @@ $registered_at = $row['registeredAt'];
 function getFullGender ($x){
     if($x == "M"){
         return "Male";
-    }else {
+    } else if($x == "F") {
         return "Female";
+    } else {
+        return "";
     }
 }
 

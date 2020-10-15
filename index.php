@@ -46,7 +46,7 @@
         <div class="hero-text">
             <p class="event-details">APRIL 25, 2015 | Assembly time: 5:00AM | SM City Batangas Parking Grounds</p>
             <p class="registration-fee">Registration fee: Php500 inclusive of race kit with shirt</p>
-            <button class="register">Register Now!</button>
+            <a class="register" href="#sign-up">Register Now!</a>
         </div>
     </div>
         
@@ -65,52 +65,52 @@
     
                 <div>
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
-                        <div class="row my-2">
-                            <div class="col">
+                        <div class="row">
+                            <div class="col mb-2">
                                 <input type="text" placeholder="First Name" class="input" name="first_name" value="<?= $firstName ?>">
                                 <span class="error"><?= $firstName_error ?></span>
                             </div>
                     
-                            <div class="col">
+                            <div class="col mb-2">
                                 <input type="text" placeholder="Last Name" class="input" name="last_name" value="<?= $lastName ?>">
                                 <span class="error"><?= $lastName_error ?></span>
                             </div>
                         </div>
-                        <div class="row my-2">
-                            <div class="col">
+                        <div class="row">
+                            <div class="col mb-2">
                                 <input type="text" placeholder="Complete Address" class="input" name="address" value="<?= $x ?>">
                                 <span class="error"><?= $userAddress_error ?></span>
                             </div>
                         </div>
-                        <div class="row my-2">
-                            <div class="col">
+                        <div class="row">
+                            <div class="col mb-2">
                                 <input type="text" class="input" name="address_2" value="<?= $y ?>">
                                 <span class="error"></span>
                             </div>
                         </div>
-                        <div class="row my-2">
-                            <div class="col">
-                                <input type="text" placeholder="Birthday DD/MM/YYYY" class="input" name="birthday" onfocus="(this.type = 'date')" onblur="(this.type='text')" value="<?= $birthday ?>">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 mb-2">
+                                <input type="text" placeholder="Birthday" class="input" name="birthday" onfocus="(this.type = 'date')" onblur="(this.type='text')" value="<?= $birthday ?>">
                                 <span class="error"><?= $birthday_error ?></span>
                             </div>
-                            <div class="col">
-                                <input type="tel" placeholder="Contact Number" class="input" name="contact" value="<?= $contact ?>">
+                            <div class="col-sm-12 col-md-6 mb-2">
+                                <input type="number" placeholder="Contact Number" class="input" name="contact" value="<?= $contact ?>">
                             </div>
                         </div>
-                        <div class="row my-2">
-                            <div class="col">
-                                <input type="text" placeholder="Email Address" class="input" name="email" value="<?= $email ?>">
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <input type="text" placeholder="Email" class="input" name="email" value="<?= $email ?>">
                                 <span class="error"><?= $email_error ?></span>
                             </div>
-                            <div class="col">
+                            <div class="col-md-4 mb-2">
                                 <select name="gender" value="<?= $gender; ?>">
                                     <option selected hidden value="">Gender</option>
-                                    <option value="M">M</option>
-                                    <option value="F">F</option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
                                 </select>
                                 <span class="error"><?= $gender_error; ?></span>
                             </div>
-                            <div class="col">
+                            <div class="col-md-4 mb-2">
                                 <select name="shirt_size" value="<?= $shirtSize ?>">
                                     <option selected hidden value="">Shirt size</option>
                                     <option value="S">S</option>
@@ -121,9 +121,9 @@
                                 <span class="error"><?= $shirtSize_error; ?></span>
                             </div>
                         </div>
-                        <div class="row justify-content-between my-2">
-                            <div class="col-4 add"><span class="add-icon"><i class="fas fa-plus"></i></span>Add more participants</div>
-                            <div class="col-8">
+                        <div class="row my-2">
+                            <div class="col-md-4 mb-2 add"><span class="add-icon"><i class="fas fa-plus"></i></span>Add more participants</div>
+                            <div class="col-md-8 justify-content-right">
                                 <input type="checkbox" name="checkbox">
                                 <a href="" class="terms-link" data-toggle="modal" data-target="#termsAndConditions">I have read and understand the Terms and Conditions</a>
                             </div>

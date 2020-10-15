@@ -8,6 +8,19 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 /* HEADER ELEMENTS */
@@ -33,6 +46,7 @@
   font-size: 14px;
   height: 100%;
   max-width: 1170px;
+  /* min-width: 60%; */
   margin: auto;
   z-index: 1;
 }
@@ -108,6 +122,7 @@
 }
 
 .register {
+  display: inline-block;
   margin-top: 15px;
   background: none;
   border: 2px solid #39b54a;
@@ -117,8 +132,12 @@
   cursor: pointer;
 }
 
+.register:hover {
+  text-decoration: none;
+}
+
 #sign-up {
-  height: 90vh;
+  min-height: 90vh;
   background-color: var(--bg-primary);
   color: #ffffff;
 }
@@ -128,7 +147,8 @@
 }
 
 .form-container {
-  max-width: 900px;
+  max-width: 50%;
+  min-width: 400px;
   margin: auto;
   text-align: center;
   padding: 30px 0;
@@ -195,7 +215,7 @@ option {
 .submit-btn {
   background: #39b54a;
   border: none;
-  padding: 8px 25px;
+  padding: 8px 40px;
   cursor: pointer;
   color: #fff;
   text-transform: uppercase;
@@ -205,7 +225,7 @@ option {
 .btn-disabled {
   background: gray;
   border: none;
-  padding: 8px 25px;
+  padding: 8px 40px;
   cursor: pointer;
   color: #fff;
   text-transform: uppercase;
@@ -219,3 +239,5 @@ option {
   font-size: 12px;
   margin: 0;
 }
+
+/* MEDIA QUERIES */
